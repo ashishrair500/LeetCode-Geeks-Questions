@@ -33,8 +33,9 @@ public class Main {
 //User function Template for Java
 
 class Solution {
-    void pushZerosToEnd(int[] nums, int n) {
+    void pushZerosToEnd(int[] arr, int n) {
         // code here
+        /*
                int index=0;
         for(int i=1; i<nums.length; i++){
 if(nums[index]==0 && nums[i]!=0){
@@ -43,7 +44,23 @@ if(nums[index]==0 && nums[i]!=0){
      nums[i]=temp;
      index++;
 }else if (nums[index]!=0)
-index++;
+index++;*/
+//second aproach
+
+int fillIndex = 0;
+        int i = 0;
+        while(i<n){
+            if(arr[i] != 0){
+                arr[fillIndex++] = arr[i];
+            }
+            i++;
         }
-    }
+        
+        while(fillIndex<n){
+            arr[fillIndex] = 0;
+            fillIndex++;
+        }
+
+        }
+    
 }

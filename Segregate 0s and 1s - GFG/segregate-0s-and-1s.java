@@ -35,6 +35,8 @@ public class Main {
 
 class Solution {
     void segregate0and1(int[] arr, int n) {
+        
+        /* approach 1; 10 sec
         int index=0;
         for(int i=1; i<n; i++){
             if(arr[i]==0 && arr[index]==1){
@@ -51,7 +53,21 @@ class Solution {
             
         }
         // code here
-        
+        */
+        int countOne=0;
+         for(int i=0; i<n; i++){
+         if(arr[i]==1) countOne++;
+             
+         }
+         for(int i=0; i<n; i++){
+         if(i<=n-countOne-1) arr[i]=0;
+         else arr[i]=1;
+             
+         }
+         
+         
+         
+         
     }
 
 }
